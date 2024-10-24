@@ -1,0 +1,27 @@
+{
+  "name": "apistoryai-generate-collection",
+  "version": "1.1.10",
+  "description": "A CLI tool that generates a collection.json from a schema.py file, defining API endpoints based on the provided database schema.",
+  "main": "generate-collection.js",
+  "bin": {
+    "apistoryai-generate-collection": "./generate-collection.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "API",
+    "generator",
+    "schema",
+    "collection",
+    "OpenAI"
+  ],
+  "author": "sterlingking",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^11.2.0",
+    "openai": "^4.67.3",
+    "python-shell": "^5.0.0"
+  },
+  "devDependencies": {}
+}

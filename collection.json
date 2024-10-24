@@ -1,0 +1,40 @@
+{
+  "endpoints": [
+    {
+      "path": "/users",
+      "method": "GET",
+      "description": "Retrieve a list of users",
+      "schema": {
+        "name": "users",
+        "columns": [
+          { "name": "id", "type": "integer" },
+          { "name": "name", "type": "string" },
+          { "name": "email", "type": "string" },
+          { "name": "msisdn", "type": "string" }
+        ],
+        "description": "Schema for users with personal information."
+      }
+    },
+    {
+      "path": "/users/{user_id}/subscriptions",
+      "method": "GET",
+      "description": "Get subscriptions for a specific user",
+      "parameters": [
+        { "name": "user_id", "in": "path", "type": "integer", "required": true }
+      ],
+      "schema": {
+        "name": "subscriptions",
+        "columns": [
+          { "name": "id", "type": "integer" },
+          { "name": "service", "type": "string" },
+          { "name": "service_duration", "type": "integer" },
+          { "name": "date_subscribed", "type": "date" },
+          { "name": "description", "type": "string" },
+          { "name": "end_date", "type": "date" },
+          { "name": "user_id", "type": "integer" }
+        ],
+        "description": "Schema capturing user-specific subscriptions."
+      }
+    }
+  ]
+}
